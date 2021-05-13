@@ -1,4 +1,6 @@
 from signaturizer import Signaturizer
+import pickle
+import os
 
 from typing import List
 from bentoml import BentoService, api, artifacts
@@ -6,23 +8,28 @@ from bentoml.adapters import JsonInput
 from bentoml.types import JsonSerializable
 from bentoml.service import BentoServiceArtifact
 
-DATASETS = ["{0}{1}".format(x,y) for x in "ABCDE" for y in "12345"]
-SIGN_LEN = 128
+DATASETS = ["{0}{1}".format(x, y) for x in "ABCDE" for y in "12345"]
+
 
 def load_model():
-    sign = Signaturizer("GLOBAL")
-    return sign
+    mdl = SignaturizerModel()
+    return mdl
 
 
 class SignaturizerModel(object):
-    def __init__(self, signaturizer):
-        self.signaturizer = signaturizer
+    def __init__(self):
+        self.signaturizer = None
+
+    def _load_signaturizer(self):
+        if self.signaturizer is None:
+            self.signaturizer = Signaturizer("GLOBAL")
 
     def predict(self, smiles_list):
-        X = self.signaturizer.predict(smiles_list)
+        self._load_signaturizer()
+        X = self.signaturizer.predict(smiles_list).signature
         result = []
         for i in range(X.shape[0]):
-            result += [{"GLOBAL", list(X[i])}]
+            result += [{"GLOBAL": list(X[i])}]
         return result
 
 
