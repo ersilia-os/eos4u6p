@@ -10,6 +10,8 @@ from bentoml.service import BentoServiceArtifact
 
 DATASETS = ["{0}{1}".format(x, y) for x in "ABCDE" for y in "12345"]
 
+VERSION = "2020_02"
+
 
 def load_model():
     mdl = SignaturizerModel()
@@ -22,14 +24,14 @@ class SignaturizerModel(object):
 
     def _load_signaturizer(self):
         if self.signaturizer is None:
-            self.signaturizer = Signaturizer("GLOBAL")
+            self.signaturizer = Signaturizer("GLOBAL", version=VERSION, verbose=True)
 
     def predict(self, smiles_list):
         self._load_signaturizer()
         X = self.signaturizer.predict(smiles_list).signature
         result = []
         for i in range(X.shape[0]):
-            result += [{"GLOBAL": list(X[i])}]
+            result += [{"signature": list(X[i])}]
         return result
 
 
