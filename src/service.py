@@ -32,6 +32,11 @@ class SignaturizerModel(object):
         result = []
         for i in range(X.shape[0]):
             result += [{"signature": list(X[i])}]
+        schema = {
+            "signature": ["{0}{1}".format(ds, str(i).zfill(3)) for ds in DATASETS for i in range(128)]
+        }
+        result = {'result': result,
+                  'schema': schema}
         return result
 
 
