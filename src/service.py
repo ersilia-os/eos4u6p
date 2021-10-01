@@ -12,31 +12,40 @@ DATASETS = ["{0}{1}".format(x, y) for x in "ABCDE" for y in "12345"]
 
 VERSION = "2020_02"
 
+CHECKPOINTS_BASEDIR = "checkpoints"
+FRAMEWORK_BASEDIR = None
+
 
 def load_model():
     mdl = SignaturizerModel()
+    mdl.load(CHECKPOINTS_BASEDIR, FRAMEWORK_BASEDIR)
     return mdl
 
 
 class SignaturizerModel(object):
     def __init__(self):
-        self.signaturizer = None
+        pass
 
-    def _load_signaturizer(self):
-        if self.signaturizer is None:
-            self.signaturizer = Signaturizer("GLOBAL", version=VERSION, verbose=True)
+    def load(self, framework_dir, checkpoints_dir):
+        self.framework_dir = framework_dir
+        self.checkpoints_dir = checkpoints_dir
+
+    def _get_model_path(self, dataset):
+        return os.path.join(self.checkpoints_dir, "{0}".format(dataset))
 
     def predict(self, smiles_list):
-        self._load_signaturizer()
-        X = self.signaturizer.predict(smiles_list).signature
+        res_ = {}
+        for ds in DATASETS:
+            path = self._get_model_path(ds)
+            sign = Signaturizer(model_name=path, local=True)
+            X = sign.predict(smiles_list).signature
+            res_[ds] = X
         result = []
-        for i in range(X.shape[0]):
-            result += [{"signature": list(X[i])}]
-        meta = {
-            "signature": ["{0}{1}".format(ds, str(i).zfill(3)) for ds in DATASETS for i in range(128)]
-        }
-        result = {'result': result,
-                  'meta': meta}
+        for i in range(len(smiles_list)):
+            d = {}
+            for k, v in res_.items():
+                d[k] = list(v[i])
+            result += [d]
         return result
 
 
