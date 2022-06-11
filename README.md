@@ -1,6 +1,6 @@
-# Chemical Checker signaturizer
+# CC signaturizer
 
-Chemical Checker 25 bioactivity signatures
+Chemical Checker signaturizer
 
 | Description | Input  | Output  | Training Data | Experimental Validation |
 | ------- | --- | --- | --- | --- |
