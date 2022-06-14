@@ -4,7 +4,7 @@ Chemical Checker signaturizer
 
 | Description | Input  | Output  | Training Data | Experimental Validation |
 | ------- | --- | --- | --- | --- |
-| A set of 25 chemical and bioactivity signatures based on the Chemical Checker | SMILES | Vectors | ~800,000 molecules | Yes |
+| A set of 25 Chemical checker bioactivity signatures (including 2D & 3D fingerprints, scaffold, binding, crystals, side effects, cell bioassays, etc) to capture properties of compounds beyond their structures | SMILES | Vectors | ~800,000 molecules | Yes |
 
 ## Source code
 This model has been published by Bertoni, M., Duran-Frigola, M., Badia-i-Mompel, P. et al. Bioactivity descriptors for uncharacterized chemical compounds. Nat Commun 12, 3932 (2021). https://doi.org/10.1038/s41467-021-24150-4
