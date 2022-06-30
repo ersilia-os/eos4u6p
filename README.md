@@ -1,4 +1,4 @@
-# Chenical Checker signaturizer
+# Chemical Checker signaturizer
 
 ## Model Identifiers
 - Slug: cc-signaturizer
@@ -22,5 +22,5 @@ This model has been published by Bertoni, M., Duran-Frigola, M., Badia-i-Mompel,
 The GPL-v3 license applies to all parts of the repository that are not externally maintained libraries. This repository uses the externally maintained library "signaturizer", located at `/model` and licensed under a MIT License
 
 ## History
-* We [downloaded](https://bioactivitysignatures.org/) the signaturizer on May 3, 2021.
+* We downloaded  the signaturizer on May 3, 2021.
 * Model was incorporated to Ersilia on September 13, 2021.
