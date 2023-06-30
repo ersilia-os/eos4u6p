@@ -23,6 +23,9 @@ A set of 25 Chemical Checker bioactivity signatures (including 2D & 3D fingerpri
 * [Source Code](http://gitlabsbnb.irbbarcelona.org/packages/signaturizer)
 * Ersilia contributor: [miquelduranfrigola](https://github.com/miquelduranfrigola)
 
+## Ersilia model URLs
+* [GitHub](https://github.com/ersilia-os/eos4u6p)
+
 ## Citation
 
 If you use this model, please cite the [original authors](https://www.nature.com/articles/s41467-021-24150-4) of the model and the [Ersilia Model Hub](https://github.com/ersilia-os/ersilia/blob/master/CITATION.cff).
