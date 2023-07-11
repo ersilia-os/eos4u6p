@@ -25,6 +25,8 @@ A set of 25 Chemical Checker bioactivity signatures (including 2D & 3D fingerpri
 
 ## Ersilia model URLs
 * [GitHub](https://github.com/ersilia-os/eos4u6p)
+* [AWS S3](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4u6p.zip)
+* [DockerHub](https://hub.docker.com/r/ersiliaos/eos4u6p) (AMD64, ARM64)
 
 ## Citation
 

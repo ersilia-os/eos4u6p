@@ -28,5 +28,11 @@
     "Publication": "https://www.nature.com/articles/s41467-021-24150-4",
     "Source Code": "http://gitlabsbnb.irbbarcelona.org/packages/signaturizer",
     "License": "MIT",
-    "Contributor": "miquelduranfrigola"
+    "Contributor": "miquelduranfrigola",
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4u6p.zip",
+    "DockerHub": "https://hub.docker.com/r/ersiliaos/eos4u6p",
+    "Docker Architecture": [
+        "AMD64",
+        "ARM64"
+    ]
 }
