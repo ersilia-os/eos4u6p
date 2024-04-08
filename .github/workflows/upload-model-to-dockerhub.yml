@@ -62,7 +62,7 @@ jobs:
 
       # We cannot tag it as anything other than latest because 
       # ersilia cli only looks for the 'latest' tag
-      - name: Build only AMD64 and Test Image
+      - name: Build only AMD64 Image for Testing
         id: buildForTest
         uses: docker/build-push-action@v5
         with:
