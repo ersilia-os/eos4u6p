@@ -26,7 +26,7 @@ def load_model(framework_dir, checkpoints_dir):
 class Model(object):
     def __init__(self):
         self.DATA_FILE = "_data.csv"
-        self.OUTPUT_FILE = "_output.csv"
+        self.OUTPUT_FILE = "_output.json"
         self.RUN_FILE = "_run.sh"
         self.LOG_FILE = "run.log"
 
