@@ -2,44 +2,87 @@
 
 A set of 25 Chemical Checker bioactivity signatures (including 2D & 3D fingerprints, scaffold, binding, crystals, side effects, cell bioassays, etc) to capture properties of compounds beyond their structures. Each signature has a length of 128 dimensions. In total, there are 3200 dimensions. The signaturizer is periodically updated. We use the 2020-02 version of the signaturizer.
 
-## Identifiers
+This model was incorporated on 2021-07-01.
 
-* EOS model ID: `eos4u6p`
-* Slug: `cc-signaturizer`
+## Information
+### Identifiers
+- **Ersilia Identifier:** `eos4u6p`
+- **Slug:** `cc-signaturizer`
 
-## Characteristics
+### Domain
+- **Task:** `Representation`
+- **Subtask:** `Featurization`
+- **Biomedical Area:** `Any`
+- **Target Organism:** `Not Applicable`
+- **Tags:** `Descriptor`, `Bioactivity profile`, `Embedding`
 
-* Input: `Compound`
-* Input Shape: `Single`
-* Task: `Representation`
-* Output: `Descriptor`
-* Output Type: `Float`
-* Output Shape: `List`
-* Interpretation: 2D projection of bioactivity signatures
+### Input
+- **Input:** `Compound`
+- **Input Dimension:** `1`
 
-## References
+### Output
+- **Output Dimension:** `3200`
+- **Output Consistency:** `Fixed`
+- **Interpretation:** 2D projection of bioactivity signatures
 
-* [Publication](https://www.nature.com/articles/s41467-021-24150-4)
-* [Source Code](http://gitlabsbnb.irbbarcelona.org/packages/signaturizer)
-* Ersilia contributor: [miquelduranfrigola](https://github.com/miquelduranfrigola)
+Below are the **Output Columns** of the model:
+| Name | Type | Direction | Description |
+|------|------|-----------|-------------|
+| a1_000 | float |  | Dimension 0 for Chemical Checker dataset chemistry (A) 2D chemistry (A1) |
+| a1_001 | float |  | Dimension 1 for Chemical Checker dataset chemistry (A) 2D chemistry (A1) |
+| a1_002 | float |  | Dimension 2 for Chemical Checker dataset chemistry (A) 2D chemistry (A1) |
+| a1_003 | float |  | Dimension 3 for Chemical Checker dataset chemistry (A) 2D chemistry (A1) |
+| a1_004 | float |  | Dimension 4 for Chemical Checker dataset chemistry (A) 2D chemistry (A1) |
+| a1_005 | float |  | Dimension 5 for Chemical Checker dataset chemistry (A) 2D chemistry (A1) |
+| a1_006 | float |  | Dimension 6 for Chemical Checker dataset chemistry (A) 2D chemistry (A1) |
+| a1_007 | float |  | Dimension 7 for Chemical Checker dataset chemistry (A) 2D chemistry (A1) |
+| a1_008 | float |  | Dimension 8 for Chemical Checker dataset chemistry (A) 2D chemistry (A1) |
+| a1_009 | float |  | Dimension 9 for Chemical Checker dataset chemistry (A) 2D chemistry (A1) |
 
-## Ersilia model URLs
-* [GitHub](https://github.com/ersilia-os/eos4u6p)
-* [AWS S3](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4u6p.zip)
-* [DockerHub](https://hub.docker.com/r/ersiliaos/eos4u6p) (AMD64, ARM64)
+_10 of 3200 columns are shown_
+### Source and Deployment
+- **Source:** `Local`
+- **Source Type:** `External`
+- **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos4u6p](https://hub.docker.com/r/ersiliaos/eos4u6p)
+- **Docker Architecture:** `AMD64`, `ARM64`
+- **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4u6p.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4u6p.zip)
 
-## Citation
+### Resource Consumption
 
-If you use this model, please cite the [original authors](https://www.nature.com/articles/s41467-021-24150-4) of the model and the [Ersilia Model Hub](https://github.com/ersilia-os/ersilia/blob/master/CITATION.cff).
 
-## License
+### References
+- **Source Code**: [http://gitlabsbnb.irbbarcelona.org/packages/signaturizer](http://gitlabsbnb.irbbarcelona.org/packages/signaturizer)
+- **Publication**: [https://www.nature.com/articles/s41587-020-0502-7](https://www.nature.com/articles/s41587-020-0502-7)
+- **Publication Type:** `Peer reviewed`
+- **Publication Year:** `2020`
+- **Ersilia Contributor:** [miquelduranfrigola](https://github.com/miquelduranfrigola)
 
-This package is licensed under a GPL-3.0 license. The model contained within this package is licensed under a MIT license.
+### License
+This package is licensed under a [GPL-3.0](https://github.com/ersilia-os/ersilia/blob/master/LICENSE) license. The model contained within this package is licensed under a [MIT](LICENSE) license.
 
-Notice: Ersilia grants access to these models 'as is' provided by the original authors, please refer to the original code repository and/or publication if you use the model in your research.
+**Notice**: Ersilia grants access to models _as is_, directly from the original authors, please refer to the original code repository and/or publication if you use the model in your research.
 
-## About Us
 
-The [Ersilia Open Source Initiative](https://ersilia.io) is a Non Profit Organization ([1192266](https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/5170657/full-print)) with the mission is to equip labs, universities and clinics in LMIC with AI/ML tools for infectious disease research.
+## Use
+To use this model locally, you need to have the [Ersilia CLI](https://github.com/ersilia-os/ersilia) installed.
+The model can be **fetched** using the following command:
+```bash
+# fetch model from the Ersilia Model Hub
+ersilia fetch eos4u6p
+```
+Then, you can **serve**, **run** and **close** the model as follows:
+```bash
+# serve the model
+ersilia serve eos4u6p
+# generate an example file
+ersilia example -n 3 -f my_input.csv
+# run the model
+ersilia run -i my_input.csv -o my_output.csv
+# close the model
+ersilia close
+```
 
-[Help us](https://www.ersilia.io/donate) achieve our mission!
+## About Ersilia
+The [Ersilia Open Source Initiative](https://ersilia.io) is a tech non-profit organization fueling sustainable research in the Global South.
+Please [cite](https://github.com/ersilia-os/ersilia/blob/master/CITATION.cff) the Ersilia Model Hub if you've found this model to be useful. Always [let us know](https://github.com/ersilia-os/ersilia/issues) if you experience any issues while trying to run it.
+If you want to contribute to our mission, consider [donating](https://www.ersilia.io/donate) to Ersilia!
