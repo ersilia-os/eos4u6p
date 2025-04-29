@@ -3,21 +3,18 @@
     "Slug": "cc-signaturizer",
     "Status": "Ready",
     "Title": "Chemical Checker signaturizer",
-    "Description": "A set of 25 Chemical Checker bioactivity signatures (including 2D & 3D fingerprints, scaffold, binding, crystals, side effects, cell bioassays, etc) to capture properties of compounds beyond their structures. Each signature has a length of 128 dimensions. In total, there are 3200 dimensions. The signaturizer is periodically updated. We use the 2020-02 version of the signaturizer.\n",
+    "Description": "A set of 25 Chemical Checker bioactivity signatures (including 2D & 3D fingerprints, scaffold, binding, crystals, side effects, cell bioassays, etc) to capture properties of compounds beyond their structures. Each signature has a length of 128 dimensions. In total, there are 3200 dimensions. The signaturizer is periodically updated. We use the 2020-02 version of the signaturizer.",
+    "Deployment": [
+        "Local"
+    ],
     "Source": "Local",
     "Source Type": "External",
+    "Task": "Representation",
+    "Subtask": "Featurization",
     "Input": [
         "Compound"
     ],
     "Input Dimension": 1,
-    "Task": "Representation",
-    "Subtask": "Featurization",
-    "Biomedical Area": [
-        "Any"
-    ],
-    "Target Organism": [
-        "Not Applicable"
-    ],
     "Output": [
         "Descriptor"
     ],
@@ -29,20 +26,25 @@
         "Bioactivity profile",
         "Embedding"
     ],
-    "Publication": "https://www.nature.com/articles/s41587-020-0502-7",
+    "Biomedical Area": [
+        "Any"
+    ],
+    "Target Organism": [
+        "Not Applicable"
+    ],
     "Publication Type": "Peer reviewed",
     "Publication Year": 2020,
+    "Publication": "https://www.nature.com/articles/s41587-020-0502-7",
     "Source Code": "http://gitlabsbnb.irbbarcelona.org/packages/signaturizer",
     "License": "MIT",
     "Contributor": "miquelduranfrigola",
     "Incorporation Date": "2021-07-01",
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4u6p.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos4u6p",
     "Docker Architecture": [
         "AMD64",
         "ARM64"
     ],
-    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4u6p.zip",
-    "Deployment": [
-        "Local"
-    ]
+    "Model Size": 538.0,
+    "Environment Size": 1974.0
 }
