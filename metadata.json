@@ -41,10 +41,16 @@
     "Incorporation Date": "2021-07-01",
     "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4u6p.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos4u6p",
-    "Docker Architecture": [
-        "AMD64",
-        "ARM64"
-    ],
+    "Docker Architecture": "AMD64",
+    "Docker Pack Method": "FastAPI",
     "Model Size": 538.0,
-    "Environment Size": 1974.0
+    "Environment Size": 1974.0,
+    "Image Size": 3505.12,
+    "Computational Performance 4": 122.55,
+    "Computational Performance 7": 112.9,
+    "Computational Performance 12": 114.33,
+    "Computational Performance 20": 117.75,
+    "Computational Performance 34": 120.37,
+    "Computational Performance 58": 123.84,
+    "Computational Performance 100": 129.23
 }
