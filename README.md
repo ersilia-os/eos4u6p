@@ -44,13 +44,18 @@ _10 of 3200 columns are shown_
 - **Source:** `Local`
 - **Source Type:** `External`
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos4u6p](https://hub.docker.com/r/ersiliaos/eos4u6p)
-- **Docker Architecture:** `AMD64`, `ARM64`
+- **Docker Architecture:** `AMD64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4u6p.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4u6p.zip)
 
 ### Resource Consumption
 - **Model Size (Mb):** `538`
 - **Environment Size (Mb):** `1974`
+- **Image Size (Mb):** `3505.12`
 
+**Computational Performance (seconds):**
+- 4 inputs: `122.55`
+- 20 inputs: `117.75`
+- 100 inputs: `129.23`
 
 ### References
 - **Source Code**: [http://gitlabsbnb.irbbarcelona.org/packages/signaturizer](http://gitlabsbnb.irbbarcelona.org/packages/signaturizer)
