@@ -53,9 +53,9 @@ _10 of 3200 columns are shown_
 - **Image Size (Mb):** `3505.12`
 
 **Computational Performance (seconds):**
-- 4 inputs: `122.55`
-- 20 inputs: `117.75`
-- 100 inputs: `129.23`
+- 10 inputs: `122.55`
+- 100 inputs: `114.33`
+- 10000 inputs: `120.37`
 
 ### References
 - **Source Code**: [http://gitlabsbnb.irbbarcelona.org/packages/signaturizer](http://gitlabsbnb.irbbarcelona.org/packages/signaturizer)
