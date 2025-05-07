@@ -2,7 +2,7 @@
 
 A set of 25 Chemical Checker bioactivity signatures (including 2D & 3D fingerprints, scaffold, binding, crystals, side effects, cell bioassays, etc) to capture properties of compounds beyond their structures. Each signature has a length of 128 dimensions. In total, there are 3200 dimensions. The signaturizer is periodically updated. We use the 2020-02 version of the signaturizer.
 
-This model was incorporated on 2021-07-01.
+This model was incorporated on 2021-05-03.
 
 ## Information
 ### Identifiers
