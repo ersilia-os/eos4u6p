@@ -38,12 +38,12 @@
     "Source Code": "http://gitlabsbnb.irbbarcelona.org/packages/signaturizer",
     "License": "MIT",
     "Contributor": "miquelduranfrigola",
-    "Incorporation Date": "2021-07-01",
+    "Incorporation Date": "2021-05-03",
     "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4u6p.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos4u6p",
     "Docker Architecture": "AMD64",
-    "Docker Pack Method": "FastAPI",
     "Model Size": 538.0,
     "Environment Size": 1974.0,
-    "Image Size": 3505.12
+    "Image Size": 3505.12,
+    "Docker Pack Method": "FastAPI"
 }
