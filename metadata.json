@@ -44,11 +44,11 @@
     "Docker Architecture": "AMD64",
     "Model Size": 538.0,
     "Environment Size": 3357.0,
-    "Image Size": 3505.45,
-    "Computational Performance 1": 127.2,
-    "Computational Performance 2": 117.85,
-    "Computational Performance 3": 134.99,
-    "Computational Performance 4": 1221.28,
+    "Image Size": 3170.93,
+    "Computational Performance 1": 118.4,
+    "Computational Performance 2": 109.08,
+    "Computational Performance 3": 123.93,
+    "Computational Performance 4": 1075.45,
     "Computational Performance 5": -1.0,
     "Docker Pack Method": "FastAPI"
 }
