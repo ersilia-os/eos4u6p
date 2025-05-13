@@ -44,17 +44,17 @@ _10 of 3200 columns are shown_
 - **Source:** `Local`
 - **Source Type:** `External`
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos4u6p](https://hub.docker.com/r/ersiliaos/eos4u6p)
-- **Docker Architecture:** `AMD64`
+- **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4u6p.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4u6p.zip)
 
 ### Resource Consumption
 - **Model Size (Mb):** `538`
 - **Environment Size (Mb):** `2770`
-- **Image Size (Mb):** `3170.93`
+- **Image Size (Mb):** `2537.31`
 
 **Computational Performance (seconds):**
-- 10 inputs: `118.4`
-- 100 inputs: `123.93`
+- 10 inputs: `105.52`
+- 100 inputs: `112.87`
 - 10000 inputs: `-1`
 
 ### References
