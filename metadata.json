@@ -20,7 +20,7 @@
     ],
     "Output Dimension": 3200,
     "Output Consistency": "Fixed",
-    "Interpretation": "2D projection of bioactivity signatures",
+    "Interpretation": "Vector representation of a molecule",
     "Tag": [
         "Descriptor",
         "Bioactivity profile",
