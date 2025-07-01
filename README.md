@@ -23,7 +23,7 @@ This model was incorporated on 2021-05-03.
 ### Output
 - **Output Dimension:** `3200`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** 2D projection of bioactivity signatures
+- **Interpretation:** Vector representation of a molecule
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
