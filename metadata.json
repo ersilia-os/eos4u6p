@@ -39,6 +39,7 @@
     "License": "MIT",
     "Contributor": "miquelduranfrigola",
     "Incorporation Date": "2021-05-03",
+    "Last Packaging Date": "2025-07-24",
     "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4u6p.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos4u6p",
     "Docker Architecture": [
@@ -47,11 +48,11 @@
     ],
     "Model Size": 538.0,
     "Environment Size": 2816.0,
-    "Image Size": 2537.45,
-    "Computational Performance 1": 51.23,
-    "Computational Performance 2": 41.39,
-    "Computational Performance 3": 46.3,
-    "Computational Performance 4": 336.57,
-    "Computational Performance 5": 1577.55,
+    "Image Size": 2572.06,
+    "Computational Performance 1": 50.12,
+    "Computational Performance 2": 40.34,
+    "Computational Performance 3": 45.64,
+    "Computational Performance 4": 316.45,
+    "Computational Performance 5": 1540.52,
     "Docker Pack Method": "FastAPI"
 }
