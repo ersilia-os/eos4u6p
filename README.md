@@ -4,6 +4,7 @@ A set of 25 Chemical Checker bioactivity signatures (including 2D & 3D fingerpri
 
 This model was incorporated on 2021-05-03.
 
+
 ## Information
 ### Identifiers
 - **Ersilia Identifier:** `eos4u6p`
@@ -13,7 +14,7 @@ This model was incorporated on 2021-05-03.
 - **Task:** `Representation`
 - **Subtask:** `Featurization`
 - **Biomedical Area:** `Any`
-- **Target Organism:** `Not Applicable`
+- **Target Organism:** `Any`
 - **Tags:** `Descriptor`, `Bioactivity profile`, `Embedding`
 
 ### Input
