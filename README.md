@@ -2,7 +2,7 @@
 
 A set of 25 Chemical Checker bioactivity signatures (including 2D & 3D fingerprints, scaffold, binding, crystals, side effects, cell bioassays, etc) to capture properties of compounds beyond their structures. Each signature has a length of 128 dimensions. In total, there are 3200 dimensions. The signaturizer is periodically updated. We use the 2020-02 version of the signaturizer.
 
-This model was incorporated on 2021-05-03.Last packaged on 2025-07-24.
+This model was incorporated on 2021-05-03.Last packaged on 2025-08-29.
 
 ## Information
 ### Identifiers
@@ -50,12 +50,12 @@ _10 of 3200 columns are shown_
 ### Resource Consumption
 - **Model Size (Mb):** `538`
 - **Environment Size (Mb):** `2814`
-- **Image Size (Mb):** `2572.06`
+- **Image Size (Mb):** `2572.08`
 
 **Computational Performance (seconds):**
-- 10 inputs: `50.12`
-- 100 inputs: `45.64`
-- 10000 inputs: `1540.52`
+- 10 inputs: `50.93`
+- 100 inputs: `47.3`
+- 10000 inputs: `1600.05`
 
 ### References
 - **Source Code**: [http://gitlabsbnb.irbbarcelona.org/packages/signaturizer](http://gitlabsbnb.irbbarcelona.org/packages/signaturizer)
