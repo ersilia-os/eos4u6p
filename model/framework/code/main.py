@@ -10,7 +10,7 @@ infile = sys.argv[1]
 outfile = sys.argv[2]
 
 ROOT = os.path.abspath(os.path.dirname(__file__))
-checkpoints_dir = os.path.join(ROOT, "..", "checkpoints")
+checkpoints_dir = os.path.join(ROOT, "..", "..", "checkpoints")
 
 
 def read_smiles_csv(in_file):
