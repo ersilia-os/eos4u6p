@@ -50,7 +50,7 @@ for x in "abcde":
     for i in range(128):
       header += ["{0}{1}_{2}".format(x, y, str(i).zfill(3))]
 
-_,smiles = read_smiles(infile)[1]
+_,smiles = read_smiles(infile)
 data = predict_signatures(smiles)
 outputs = refactor(data)
 
