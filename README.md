@@ -59,7 +59,7 @@ _10 of 3200 columns are shown_
 
 ### References
 - **Source Code**: [http://gitlabsbnb.irbbarcelona.org/packages/signaturizer](http://gitlabsbnb.irbbarcelona.org/packages/signaturizer)
-- **Publication**: [https://www.nature.com/articles/s41587-020-0502-7](https://www.nature.com/articles/s41587-020-0502-7)
+- **Publication**: [https://doi.org/10.1038/s41587-020-0502-7](https://doi.org/10.1038/s41587-020-0502-7)
 - **Publication Type:** `Peer reviewed`
 - **Publication Year:** `2020`
 - **Ersilia Contributor:** [miquelduranfrigola](https://github.com/miquelduranfrigola)
