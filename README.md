@@ -1,6 +1,6 @@
 # Chemical Checker signaturizer
 
-A set of 25 Chemical Checker bioactivity signatures (including 2D & 3D fingerprints, scaffold, binding, crystals, side effects, cell bioassays, etc) to capture properties of compounds beyond their structures. Each signature has a length of 128 dimensions. In total, there are 3200 dimensions. The signaturizer is periodically updated. We use the 2020-02 version of the signaturizer.
+The Chemical Checker turns a molecule into 3,200 bioactivity features spanning twenty-five spaces, from chemical properties through targets, networks and cellular response to clinical outcomes. Duran-Frigola and colleagues harmonised experimental data on roughly 800,000 compounds into this common format, then trained networks to infer signatures for molecules lacking measurements, extending similarity comparison from structure to biology. Inferred signatures are predictions, most trustworthy for compounds resembling well-characterised chemistry.
 
 This model was incorporated on 2021-05-03.Last packaged on 2026-05-13.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2021-05-03.Last packaged on 2026-05-13.
 ### Output
 - **Output Dimension:** `3200`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Vector representation of a molecule
+- **Interpretation:** 3200 bioactivity features spanning twenty-five Chemical Checker spaces from chemistry to clinical outcomes.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
