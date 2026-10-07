@@ -1,6 +1,6 @@
 # Chemical Checker signaturizer
 
-The Chemical Checker turns a molecule into 3,200 bioactivity features spanning twenty-five spaces, from chemical properties through targets, networks and cellular response to clinical outcomes. Duran-Frigola and colleagues harmonised experimental data on roughly 800,000 compounds into this common format, then trained networks to infer signatures for molecules lacking measurements, extending similarity comparison from structure to biology. Inferred signatures are predictions, most trustworthy for compounds resembling well-characterised chemistry.
+Describes a molecule by its expected biological behaviour rather than its structure, returning 128 numbers for each of the twenty-five Chemical Checker spaces, which run from 2D chemistry and scaffolds through targets and networks to cell assays and clinical side effects. Duran-Frigola and colleagues harmonised bioactivity data on roughly 800,000 compounds into this common format; neural networks then infer a signature for any query, measured or not. Ersilia ships the 2020-02 signaturizer, a frozen snapshot of a resource that is periodically updated.
 
 This model was incorporated on 2021-05-03.Last packaged on 2026-05-13.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2021-05-03.Last packaged on 2026-05-13.
 ### Output
 - **Output Dimension:** `3200`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** 3200 bioactivity features spanning twenty-five Chemical Checker spaces from chemistry to clinical outcomes.
+- **Interpretation:** 128 inferred bioactivity features for each of twenty-five Chemical Checker spaces, from chemistry to clinical outcomes.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
