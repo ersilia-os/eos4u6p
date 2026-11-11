@@ -1,7 +1,6 @@
 import os, sys
 from signaturizer import Signaturizer
 import numpy as np
-from rdkit import Chem
 from ersilia_pack_utils.core import read_smiles, write_out
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
@@ -17,33 +16,12 @@ checkpoints_dir = os.path.join(ROOT, "..", "..", "checkpoints")
 def get_model_path(ds):
   return os.path.join(checkpoints_dir, ds)
 
-def smiles_to_mol(smi):
-  # Same path as signaturizer 1.1.10 and the Chemical Checker training data:
-  # SMILES -> RDKit mol -> InChI -> RDKit mol. Signaturizer 1.1.16 skips the
-  # InChI round trip when given SMILES, which changes the Morgan fingerprint
-  # (e.g. tautomers), so the molecules are prepared here and passed as RDKit mols.
-  # Returns None for a molecule that cannot be read; the signaturizer then
-  # gives it a NaN row instead of dropping it.
-  if not smi:
-    return None
-  try:
-    mol = Chem.MolFromSmiles(smi)
-    if mol is None:
-      return None
-    inchi = Chem.rdinchi.MolToInchi(mol)[0]
-    if not inchi:
-      return None
-    return Chem.inchi.MolFromInchi(inchi)
-  except Exception:
-    return None
-
 def predict_signatures(smiles_list):
-  mols = [smiles_to_mol(smi) for smi in smiles_list]
   res_ = {}
   for ds in DATASETS:
     path = get_model_path(ds.upper())
     sign = Signaturizer(model_name=path, local=True)
-    X = sign.predict(mols, molecule_fmt="RDKIT").signature
+    X = sign.predict(smiles_list).signature
     res_[ds] = X
   result = []
   for i in range(len(smiles_list)):
