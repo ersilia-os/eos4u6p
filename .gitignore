@@ -129,7 +129,3 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-
-#eosvc managed
-model/checkpoints/*
-model/framework/fit/*
