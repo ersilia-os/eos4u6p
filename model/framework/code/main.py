@@ -22,20 +22,26 @@ def smiles_to_mol(smi):
   # SMILES -> RDKit mol -> InChI -> RDKit mol. Signaturizer 1.1.16 skips the
   # InChI round trip when given SMILES, which changes the Morgan fingerprint
   # (e.g. tautomers), so the molecules are prepared here and passed as RDKit mols.
-  # Returns None for a molecule that cannot be read; the signaturizer then
-  # gives it a NaN row instead of dropping it.
+  # When RDKit cannot rebuild a molecule from its InChI (some charge-separated
+  # structures, e.g. benzotriazine di-N-oxides), the molecule parsed from the
+  # SMILES is used instead, so it gets a signature rather than an empty row; the
+  # authors' signaturizer gives these NaN. Every other molecule is unchanged.
+  # Returns None for a SMILES that cannot be read; the signaturizer then gives
+  # it a NaN row instead of dropping it.
   if not smi:
     return None
   try:
     mol = Chem.MolFromSmiles(smi)
-    if mol is None:
-      return None
-    inchi = Chem.rdinchi.MolToInchi(mol)[0]
-    if not inchi:
-      return None
-    return Chem.inchi.MolFromInchi(inchi)
   except Exception:
     return None
+  if mol is None:
+    return None
+  try:
+    inchi = Chem.rdinchi.MolToInchi(mol)[0]
+    inchi_mol = Chem.inchi.MolFromInchi(inchi) if inchi else None
+  except Exception:
+    inchi_mol = None
+  return inchi_mol if inchi_mol is not None else mol
 
 def predict_signatures(smiles_list):
   mols = [smiles_to_mol(smi) for smi in smiles_list]
