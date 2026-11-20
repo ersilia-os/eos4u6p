@@ -3,7 +3,7 @@
 Describes a molecule by its expected biological behaviour rather than its structure, returning 128 numbers for each of the twenty-five Chemical Checker spaces, which run from 2D chemistry and scaffolds through targets and networks to cell assays and clinical side effects. Duran-Frigola and colleagues harmonised bioactivity data on roughly 800,000 compounds into this common format; neural networks then infer a signature for any query, measured or not. Ersilia ships the 2020-02 signaturizer, a frozen snapshot of a resource that is periodically updated.
 
 This model was incorporated on 2021-05-03.
-Last packaged on 2026-11-16.
+Last packaged on 2026-11-20.
 
 ## Information
 ### Identifiers
@@ -52,12 +52,12 @@ _10 of 3200 columns are shown_
 ### Resource Consumption
 - **Model Size (Mb):** `1028`
 - **Environment Size (Mb):** `2062`
-- **Image Size (Mb):** `1172.49`
+- **Image Size (Mb):** `1172.5`
 
 **Computational Performance (seconds):**
-- 10 inputs: `44.84`
-- 100 inputs: `35.48`
-- 10000 inputs: `1007.18`
+- 10 inputs: `43.6`
+- 100 inputs: `35.3`
+- 10000 inputs: `1005.82`
 
 ### References
 - **Source Code**: [http://gitlabsbnb.irbbarcelona.org/packages/signaturizer](http://gitlabsbnb.irbbarcelona.org/packages/signaturizer)
