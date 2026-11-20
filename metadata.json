@@ -48,7 +48,7 @@
         "ARM64"
     ],
     "Apptainer": "https://models-sif.s3.eu-north-1.amazonaws.com/eos4u6p_v2.sif",
-    "Model Size": 538.0,
+    "Model Size": 1028.0,
     "Environment Size": 2062.0,
     "Image Size": 1172.49,
     "Computational Performance 1": 44.84,
